@@ -12,16 +12,16 @@ class ExpenseItem extends StatelessWidget {
       child: Column(
         children: [
           Text(expense.title),
-          const SizedBox(height: 10,),
+          const SizedBox(height: 15,),
           Row(
             children: [
               Text(expense.amount.toStringAsFixed(2)),
               const Spacer(),
               Row(
                 children: [
-                  const Icon(Icons.alarm_add),
+                  Icon(categoryIcons[expense.category]),
                   const SizedBox(width: 10,),
-                  Text(expense.date.toString())
+                  Text(expense.formattedDate)
                 ],
               )
             ],

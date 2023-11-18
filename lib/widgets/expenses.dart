@@ -26,9 +26,14 @@ class _ExpensesState extends State<Expenses> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(title: const Text("Expense Tracker"), actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.add),
+          )
+        ]),
         body: Column(
           children: [
-            const Text("Chart is displayed here"),
             Expanded(child: ExpensesList(expenses: _registeredExpenses))
           ],
         ),
